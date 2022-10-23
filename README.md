@@ -1,7 +1,8 @@
-# Blender Target Bone Maker
-Simple addon to make target bones from your deformation bones in one click
+# RigB
+Collection of rigging tools and macros made by me. 
 
 # How to use
+## Make Target Bone
 UI located in Edit mode for an armature as a side panel button (Edit -> Make Target Bone)
 
 This script will make a target bone for all selected bones and rename it by:
