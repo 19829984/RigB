@@ -5,7 +5,7 @@ from bpy.types import Operator
 
 
 class MakeTargetBones(Operator):
-    """Reloads all images currently in the file"""
+    """Make Target Bones from Deformation Bones"""
     bl_idname = "armature.make_target_bones" 
     bl_label = "Make Target Bones from Deformation Bones"
     
@@ -29,7 +29,7 @@ class MakeTargetBones(Operator):
             # Rename bone
             bone_name = re.search("^[^-_]*(.*)", trimmed_tgt_bone_name) # Capture string ater first "-" or "_" character
             bone_name = "-" + trimmed_tgt_bone_name if bone_name.groups()[0] == '' else bone_name.groups()[0] # If no match found then just use current name
-            tgt_bone_pose.name = 'tgt' + bone_name
+            tgt_bone_pose.name = 'TGT' + bone_name
             
             # Disable Deformation
             tgt_bone_pose.bone.use_deform = False
