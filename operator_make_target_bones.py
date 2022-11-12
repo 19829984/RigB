@@ -8,6 +8,7 @@ class MakeTargetBones(Operator):
     """Make Target Bones from Deformation Bones"""
     bl_idname = "armature.make_target_bones" 
     bl_label = "Make Target Bones from Deformation Bones"
+    bl_options = {'UNDO'}
     
 
     def execute(self, context):

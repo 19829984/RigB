@@ -11,13 +11,14 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 from . import operator_make_target_bones
+from . import space_switch
 from . import ui
 import bpy
 
 bl_info = {
-    "name": "Make Target Cones",
+    "name": "RigB Tools",
     "author": "Bowen Wu",
-    "description": "Simple tool make target bones from your deformation bones with constraints made for you",
+    "description": "Collection of rigging tools I made",
     "blender": (2, 80, 3),
     "version": (1, 0, 0),
     "location": "",
@@ -28,9 +29,11 @@ bl_info = {
 
 def register():
     operator_make_target_bones.register()
+    space_switch.register()
     ui.register()
 
 
 def unregister():
     operator_make_target_bones.unregister()
+    space_switch.unregister()
     ui.unregister()
